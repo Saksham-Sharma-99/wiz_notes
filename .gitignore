@@ -1,0 +1,85 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Ignore the following:
+*.db
+*.DS_Store
+*.so
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Environments
+.env
+.env.*
+
+# Virtualenv
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Static and media folders (if they are auto-generated)
+staticfiles/
+media/
+
+# Migrations
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/*.pyd
+**/migrations/__pycache__/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pyright
+pyright/
+
+# Pylint
+pylint.json
+
+# pytest
+.cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode specific folders
+.vscode/
+
+# Other editors specific files
+.idea/
