@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS wiznotes;
+-- CREATE DATABASE wiznotes;

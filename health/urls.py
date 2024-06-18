@@ -1,6 +1,6 @@
 from django.urls import path, include
-from . import views
+from . import controllers
 
 urlpatterns = [
-    path("", views.health, name="health")
+    path("", controllers.health, name="health")
 ]

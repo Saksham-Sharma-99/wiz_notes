@@ -7,4 +7,4 @@ ENV POSTGRES_USER postgres
 ENV POSTGRES_PASSWORD postgres
 
 # Copy the SQL script to initialize the database
-# COPY ./docker/initializers/init.sql /docker-entrypoint-initdb.d/
+COPY ./docker/initializers/init.sql /docker-entrypoint-initdb.d/
