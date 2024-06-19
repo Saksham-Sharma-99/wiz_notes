@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "health",
     "users",
     "user_sessions",
+    "documents",
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "middlewares.session_authentication.SessionAuthentication",
+    "middlewares.user_session_authentication.UserSessionAuthentication",
 ]
 
 ROOT_URLCONF = "wiz_notes.urls"
@@ -133,3 +134,10 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# secrets
+
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_BUCKET")
+AWS_REGION = os.getenv("AWS_REGION")
