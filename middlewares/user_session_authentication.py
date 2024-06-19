@@ -9,13 +9,15 @@ other_exempted_routes = [
     '/favicon.ico'
 ]
 
-class SessionAuthentication:
+class UserSessionAuthentication:
     EXEMPT_ROUTES = user_exempted_routes + other_exempted_routes
 
     def __init__(self, get_response):
         self.get_response = get_response
 
     def __call__(self, request):
+        setattr(request, '_dont_enforce_csrf_checks', True)
+
         if any(request.path.startswith(route) for route in self.EXEMPT_ROUTES):
             return self.get_response(request)
         # Process the request before it reaches the view
