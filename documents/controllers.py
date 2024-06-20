@@ -5,6 +5,7 @@ from django.conf import settings
 from .models import Document
 from .services.upload_service import upload_to_s3
 from .services.create_service import create_document
+from.services.utils import generate_presigned_url
 import os
 
 @csrf_exempt
@@ -25,5 +26,8 @@ def upload_document(request):
     # Create a new Document instance using the service
     document = create_document(user=user, s3_url=s3_url, title=title, file=file)
 
+    # public url
+    public_url = generate_presigned_url(s3_url)
 
-    return Response({'message': 'File uploaded successfully', 'document_id': document.title})
+
+    return Response({'message': 'File uploaded successfully', 'document_title': document.title, "public_url": public_url})
