@@ -5,3 +5,8 @@ djangorestframework
 boto3
 celery
 redis
+python-docx
+PyMuPDF
+pandas
+numpy<2
+bottleneck>1.3.6
