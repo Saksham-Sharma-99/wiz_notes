@@ -1,9 +1,0 @@
-PyMuPDF
-python-docx
-Pillow
-pytesseract
-opencv-python
-pandas
-numpy
-openpyxl
-Spire.Doc
