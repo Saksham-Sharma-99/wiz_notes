@@ -28,7 +28,7 @@ def signup(request):
     serializer = UserLoginSerializer(user)
     return Response(serializer.data)
 
-@api_view(['POST'])
-def login(request):
-    mode = request.data.get('mode', None)
-    login_data = request.data.get('login_data', None)
+# @api_view(['POST'])
+# def login(request):
+#     mode = request.data.get('mode', None)
+#     login_data = request.data.get('login_data', None)
