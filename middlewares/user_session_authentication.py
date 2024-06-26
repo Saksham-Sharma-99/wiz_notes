@@ -3,7 +3,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from user_sessions.models import UserSession  # Assuming your sessions model is in 'sessions' app
 
 user_exempted_routes = [
-    '/users/open'
+    '/users/signup/',
+    '/users/login/'
 ]
 other_exempted_routes = [
     '/favicon.ico'

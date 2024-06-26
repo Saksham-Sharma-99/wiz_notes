@@ -12,7 +12,7 @@ class User(models.Model):
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=100)
     status = models.CharField(max_length=50, choices=Status.choices, default=Status.ACTIVE)
-    last_login = models.DateField(default=None)
+    last_login = models.DateTimeField(default=None, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
