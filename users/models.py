@@ -9,6 +9,7 @@ class User(models.Model):
         ACTIVE = "active", "active"
         INACTIVE = "inactive", "inactive"
 
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=100)
     status = models.CharField(max_length=50, choices=Status.choices, default=Status.ACTIVE)

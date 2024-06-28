@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "users",
     "user_sessions",
     "documents",
+    "directories",
 ]
 
 MIDDLEWARE = [

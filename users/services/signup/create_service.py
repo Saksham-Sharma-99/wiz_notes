@@ -3,6 +3,7 @@ from constants.error_codes import error_codes
 from django.conf import settings
 from external_apis.third_party_login.google import GoogleAuth
 from constants.error_codes import error_codes
+from directories.tasks import create_default_directory
 
 
 class CreateService:
@@ -36,4 +37,5 @@ class CreateService:
             return user, None
         else:
             new_user = User.objects.create(email=email, name=email.split('@')[0], status='active')
+            create_default_directory.delay(new_user.id)
             return new_user, None
